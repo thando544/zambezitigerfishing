@@ -16,7 +16,7 @@ export function Layout() {
         Skip to content
       </a>
       <Header />
-      <main id="main" className="pb-20 md:pb-0">
+      <main id="main">
         <Outlet />
       </main>
       <Footer />

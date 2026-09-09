@@ -3,6 +3,7 @@ import { Section } from "@/components/ui/Section"
 import { ImageSlot } from "@/components/ui/ImageSlot"
 import { Button } from "@/components/ui/Button"
 import { RoomCard } from "@/components/accommodation/RoomCard"
+import { MwenjeLogo } from "@/components/brand/Logos"
 import { propertyFacts, propertySpaces, rooms } from "@/data/rooms"
 
 export default function Accommodation() {
@@ -16,6 +17,7 @@ export default function Accommodation() {
       />
       <section className="bg-forest pt-32 pb-20 text-ivory">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <MwenjeLogo onDark className="mb-6 h-20" />
           <p className="eyebrow text-bronze-soft">Mwenje Guest House</p>
           <h1 className="display mt-4 max-w-3xl text-5xl md:text-7xl">Your home in Victoria Falls</h1>
           <p className="mt-6 max-w-xl text-ivory/78">

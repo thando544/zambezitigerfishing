@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom"
+import { ZambeziLogo } from "@/components/brand/Logos"
 import { isSupabaseConfigured } from "@/lib/supabase"
 import { Seo } from "@/components/seo/Seo"
 import { cn } from "@/lib/utils"
@@ -25,6 +26,7 @@ export function AdminLayout() {
       <Seo title="Admin" description="Private CMS for Zambezi Tiger Adventures and Mwenje Guest House." path="/admin" noIndex />
       <div className="grid lg:grid-cols-[16rem_1fr]">
         <aside className="border-b border-bronze/20 bg-ink px-5 py-8 text-ivory lg:min-h-screen lg:border-r lg:border-b-0">
+          <ZambeziLogo onDark className="mb-6 h-12" />
           <p className="eyebrow text-bronze">CMS</p>
           <p className="display mt-2 text-2xl">Studio</p>
           <nav className="mt-8 flex flex-col gap-1" aria-label="Admin">

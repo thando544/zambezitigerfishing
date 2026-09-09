@@ -12,6 +12,7 @@ import { propertyFacts, rooms } from "@/data/rooms"
 import { reviews } from "@/data/navigation"
 import { SITE_NAME } from "@/lib/seo"
 import { ReviewCard } from "@/components/reviews/ReviewCard"
+import { MwenjeLogo, ZambeziLogo } from "@/components/brand/Logos"
 import bannerVideo from "@/assets/banner.mp4"
 
 export default function Home() {
@@ -48,6 +49,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/10" />
             <div className="relative flex h-full min-h-[32rem] flex-col justify-end p-8 md:p-10">
+              <ZambeziLogo onDark className="mb-6 h-14 w-auto md:h-16" />
               <p className="eyebrow">Zambezi Tiger Adventures</p>
               <h3 className="display mt-3 text-4xl md:text-5xl">Fish the Upper Zambezi</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ivory/80">
@@ -69,6 +71,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/50 to-forest/20" />
             <div className="relative flex h-full min-h-[32rem] flex-col justify-end p-8 md:p-10">
+              <MwenjeLogo onDark className="mb-6 h-16 w-auto" />
               <p className="eyebrow">Mwenje Guest House</p>
               <h3 className="display mt-3 text-4xl md:text-5xl">A base in Victoria Falls</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ivory/80">

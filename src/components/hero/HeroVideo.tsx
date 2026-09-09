@@ -15,6 +15,10 @@ type HeroVideoProps = {
   secondaryCta?: { label: string; to: string }
 }
 
+function isBundledAsset(path: string) {
+  return Boolean(path) && !path.startsWith("/media/")
+}
+
 async function mediaExists(path: string) {
   try {
     const response = await fetch(path, { method: "HEAD" })
@@ -40,30 +44,37 @@ export function HeroVideo({
   const reducedMotion = usePrefersReducedMotion()
   const isMobile = useMediaQuery("(max-width: 767px)")
   const videoRef = useRef<HTMLVideoElement>(null)
-  const [poster, setPoster] = useState(fallbackImage)
-  const [videoSrc, setVideoSrc] = useState<string | null>(null)
+  const [poster, setPoster] = useState<string | null>(isBundledAsset(desktopSrc) ? null : fallbackImage)
+  const [videoSrc, setVideoSrc] = useState<string | null>(() => (isBundledAsset(desktopSrc) ? desktopSrc : null))
   const [videoFailed, setVideoFailed] = useState(false)
+  const [videoReady, setVideoReady] = useState(false)
 
   useEffect(() => {
     let cancelled = false
 
-    function isBundledAsset(path: string) {
-      return !path.startsWith("/media/")
-    }
-
     async function resolveSources() {
-      const posterOk = await mediaExists(posterSrc)
-      if (!cancelled && posterOk) setPoster(posterSrc)
-
-      if (reducedMotion) return
+      if (reducedMotion) {
+        const posterOk = await mediaExists(posterSrc)
+        if (!cancelled) {
+          setVideoSrc(null)
+          setPoster(posterOk ? posterSrc : fallbackImage)
+        }
+        return
+      }
 
       const preferred = isMobile ? mobileSrc : desktopSrc
       const alternate = isMobile ? desktopSrc : mobileSrc
 
       if (isBundledAsset(preferred)) {
-        if (!cancelled) setVideoSrc(preferred)
+        if (!cancelled) {
+          setVideoSrc(preferred)
+          setPoster(null)
+        }
         return
       }
+
+      const posterOk = await mediaExists(posterSrc)
+      if (!cancelled && posterOk) setPoster(posterSrc)
 
       const preferredOk = await mediaExists(preferred)
       if (!cancelled && preferredOk) {
@@ -78,11 +89,13 @@ export function HeroVideo({
     return () => {
       cancelled = true
     }
-  }, [desktopSrc, isMobile, mobileSrc, posterSrc, reducedMotion])
+  }, [desktopSrc, fallbackImage, isMobile, mobileSrc, posterSrc, reducedMotion])
 
   useEffect(() => {
     const video = videoRef.current
     if (!video || !videoSrc || reducedMotion) return
+    video.muted = true
+    video.defaultMuted = true
     const play = async () => {
       try {
         await video.play()
@@ -94,37 +107,41 @@ export function HeroVideo({
   }, [reducedMotion, videoSrc])
 
   const showVideo = Boolean(videoSrc) && !videoFailed && !reducedMotion
+  const showStill = !showVideo || (Boolean(poster) && !videoReady)
 
   return (
     <section className="relative isolate h-[100svh] min-h-[38rem] overflow-hidden bg-ink text-ivory">
-      <img
-        src={poster}
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover"
-        width={1920}
-        height={1080}
-        fetchPriority="high"
-        decoding="async"
-        onError={(event) => {
-          event.currentTarget.src = fallbackImage
-        }}
-      />
+      {showStill && poster ? (
+        <img
+          src={poster}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+          width={1920}
+          height={1080}
+          decoding="async"
+          onError={(event) => {
+            if (fallbackImage && event.currentTarget.src !== fallbackImage) {
+              event.currentTarget.src = fallbackImage
+            }
+          }}
+        />
+      ) : null}
 
       {showVideo ? (
         <video
           ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
-          poster={poster}
+          src={videoSrc ?? undefined}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           aria-hidden="true"
+          onLoadedData={() => setVideoReady(true)}
+          onPlaying={() => setVideoReady(true)}
           onError={() => setVideoFailed(true)}
-        >
-          <source src={videoSrc ?? undefined} type="video/mp4" />
-        </video>
+        />
       ) : null}
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,16,14,0.18)_0%,rgba(18,16,14,0.12)_42%,rgba(18,16,14,0.62)_100%)]" />
