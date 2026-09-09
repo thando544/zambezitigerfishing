@@ -18,6 +18,6 @@ export const contentNotes = {
   amenities:
     "Room facilities listed here are limited to details that can be corroborated from public listings. In-room extras should be confirmed before publishing.",
   photography:
-    "Mwenje property images are local placeholders until approved originals are supplied. Destination photographs are used for Victoria Falls and Zambezi atmosphere only.",
+    "Mwenje property photographs are the client's originals in /public/images/mwenje.",
   reviews: "Guest reviews are unpublished until permission and attribution are in place.",
 }

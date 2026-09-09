@@ -11,9 +11,9 @@ export default function Accommodation() {
     <>
       <Seo
         title="Mwenje Guest House Victoria Falls"
-        description="Ensuite guest house in Victoria Falls with six rooms, a swimming pool, garden, breakfast, Wi-Fi and parking. About twelve guests."
+        description="Ensuite guest house in Victoria Falls with six rooms: five for singles or couples, and one twin. Free Wi-Fi and television in every room."
         path="/stay"
-        image="/images/mwenje/exterior.svg"
+        image="/images/mwenje/room-double-2.jpg"
       />
       <section className="bg-forest pt-32 pb-20 text-ivory">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
@@ -21,7 +21,7 @@ export default function Accommodation() {
           <p className="eyebrow text-bronze-soft">Mwenje Guest House</p>
           <h1 className="display mt-4 max-w-3xl text-5xl md:text-7xl">Your home in Victoria Falls</h1>
           <p className="mt-6 max-w-xl text-ivory/78">
-            A comfortable Victoria Falls base with ensuite rooms, garden spaces, a swimming pool and a relaxed atmosphere.
+            A comfortable Victoria Falls base with ensuite rooms — five for a single guest or a couple, and one twin — plus free Wi-Fi and television in every room.
           </p>
         </div>
       </section>
@@ -34,9 +34,6 @@ export default function Accommodation() {
             </div>
           ))}
         </div>
-        <p className="mt-10 max-w-2xl text-sm text-mist">
-          These figures come from public listings and should be verified with the property before they are treated as final.
-        </p>
       </Section>
       <Section heading="The property" className="pt-0">
         <div className="grid gap-8 md:grid-cols-2">
@@ -44,9 +41,7 @@ export default function Accommodation() {
             <article key={space.title}>
               <ImageSlot
                 src={space.image}
-                fallbackSrc={space.fallback}
-                alt={`Placeholder for ${space.title} at Mwenje Guest House`}
-                placeholderLabel={space.title}
+                alt={`${space.title} at Mwenje Guest House`}
                 className="h-72 w-full object-cover"
               />
               <h2 className="display mt-5 text-3xl">{space.title}</h2>

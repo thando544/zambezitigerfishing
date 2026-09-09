@@ -39,17 +39,7 @@ Place client files here when they exist. The homepage does not break if they are
 
 ## Mwenje photography
 
-Replace the SVG placeholders with approved originals using the same basenames:
-
-- `public/images/mwenje/exterior.webp`
-- `public/images/mwenje/pool.webp`
-- `public/images/mwenje/room-double.webp`
-- `public/images/mwenje/room-twin.webp`
-- `public/images/mwenje/dining.webp`
-- `public/images/mwenje/lounge.webp`
-- `public/images/mwenje/garden.webp`
-
-Do not scrape Booking.com or Airbnb photographs into production.
+Client originals live in `public/images/mwenje/`. The SVG placeholders have been removed.
 
 ## Supabase
 

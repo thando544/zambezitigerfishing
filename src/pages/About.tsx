@@ -25,8 +25,7 @@ export default function About() {
             <MwenjeLogo className="mb-6 h-20" />
             <h2 className="display text-4xl">Mwenje Guest House</h2>
             <p className="mt-5 leading-relaxed text-charcoal/80">
-              Six ensuite rooms in Victoria Falls — four double, two twin — with space for about twelve guests. Pool,
-              garden, lounge, dining, breakfast, Wi-Fi, parking and air-conditioned rooms. A quiet place to come back to.
+              Six ensuite rooms in Victoria Falls — five for a single guest or a couple, and one twin with two beds. Free Wi-Fi and television in every room.
             </p>
           </div>
         </div>

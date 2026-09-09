@@ -39,7 +39,7 @@ export const faqs: Faq[] = [
     id: "faq-rooms",
     question: "How many guests can stay at Mwenje?",
     answer:
-      "Six ensuite rooms — four double and two twin — with capacity for approximately twelve guests. Confirm the exact arrangement for your dates.",
+      "Six ensuite rooms — five for a single guest or a couple, and one twin room with two beds. Free Wi-Fi and television in every room. Confirm the exact arrangement for your dates.",
     category: "stay",
     published: true,
   },

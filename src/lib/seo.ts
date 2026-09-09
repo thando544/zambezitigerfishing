@@ -39,7 +39,7 @@ export const jsonLdGraph = {
       "@type": "LodgingBusiness",
       name: siteSettings.stayBrand,
       description:
-        "Ensuite guest house in Victoria Falls with six rooms, a swimming pool, garden and breakfast.",
+        "Ensuite guest house in Victoria Falls with six rooms: five for singles or couples, one twin, plus free Wi-Fi and television.",
       numberOfRooms: 6,
       amenityFeature: [
         { "@type": "LocationFeatureSpecification", name: "Swimming pool" },

@@ -92,7 +92,7 @@ export function AdminReports() {
 
 export function AdminGallery() {
   return (
-    <Shell title="Gallery" intro="Public gallery items. Replace Mwenje placeholders with approved originals in /public/images/mwenje.">
+    <Shell title="Gallery" intro="Public gallery items, including Mwenje originals in /public/images/mwenje.">
       <p className="text-sm">{galleryItems.length} items in the current seed.</p>
     </Shell>
   )

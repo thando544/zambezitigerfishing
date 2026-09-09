@@ -39,7 +39,7 @@ export default function Room() {
               {room.amenities.map((item) => (
                 <li key={item.key} className="flex justify-between gap-4 border-b border-bronze/15 py-2">
                   <span>{item.label}</span>
-                  <span className="text-mist">{item.verified ? "Listed" : "Confirm on enquiry"}</span>
+                  <span className="text-mist">{item.verified ? "Included" : "Confirm on enquiry"}</span>
                 </li>
               ))}
             </ul>

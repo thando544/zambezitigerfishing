@@ -8,13 +8,12 @@ export default function Rooms() {
     <>
       <Seo
         title="Rooms at Mwenje Guest House"
-        description="Double ensuite and twin ensuite rooms at Mwenje Guest House, Victoria Falls. Confirm availability when you enquire."
+        description="Five double ensuite rooms for singles or couples, and one twin ensuite with two beds. Free Wi-Fi and TV in every room."
         path="/stay/rooms"
       />
       <Section className="pt-32" eyebrow="Mwenje Guest House" heading="Rooms">
         <p className="mb-12 max-w-2xl text-charcoal/80">
-          Four double ensuite rooms and two twin ensuite rooms. We do not show live inventory. Confirm availability for
-          your dates.
+          Five ensuite rooms for a single guest or a couple, and one twin room with two beds. Free Wi-Fi and television in every room. Confirm availability for your dates.
         </p>
         <div className="space-y-8">
           {rooms.map((room) => (

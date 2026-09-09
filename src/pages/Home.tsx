@@ -16,7 +16,10 @@ import { MwenjeLogo, ZambeziLogo } from "@/components/brand/Logos"
 import bannerVideo from "@/assets/banner.mp4"
 
 export default function Home() {
-  const previewGallery = galleryItems.filter((item) => !item.placeholder).slice(0, 6)
+  const previewGallery = [
+    ...galleryItems.filter((item) => item.category === "mwenje").slice(0, 3),
+    ...galleryItems.filter((item) => item.category !== "mwenje").slice(0, 3),
+  ]
 
   return (
     <>
@@ -63,10 +66,8 @@ export default function Home() {
           </article>
           <article className="group relative min-h-[32rem] overflow-hidden bg-forest text-ivory">
             <ImageSlot
-              src="/images/mwenje/exterior.webp"
-              fallbackSrc="/images/mwenje/exterior.svg"
-              alt="Placeholder for Mwenje Guest House exterior"
-              placeholderLabel="Mwenje exterior"
+              src="/images/mwenje/room-double-2.jpg"
+              alt="Double ensuite room at Mwenje Guest House"
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/50 to-forest/20" />
@@ -75,8 +76,7 @@ export default function Home() {
               <p className="eyebrow">Mwenje Guest House</p>
               <h3 className="display mt-3 text-4xl md:text-5xl">A base in Victoria Falls</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ivory/80">
-                A comfortable Victoria Falls base with ensuite rooms, garden spaces, a swimming pool and a relaxed
-                atmosphere.
+                A comfortable Victoria Falls base with ensuite rooms — five for a single guest or a couple, and one twin — with free Wi-Fi and television in every room.
               </p>
               <Button to="/stay" variant="ivory" className="mt-8 w-fit">
                 Explore Mwenje
@@ -143,33 +143,27 @@ export default function Home() {
         </div>
         <div className="mt-14 grid gap-4 md:grid-cols-4">
           {[
-            { src: "/images/mwenje/pool.webp", fallback: "/images/mwenje/pool.svg", label: "Pool" },
-            { src: "/images/mwenje/garden.webp", fallback: "/images/mwenje/garden.svg", label: "Garden" },
-            { src: "/images/mwenje/lounge.webp", fallback: "/images/mwenje/lounge.svg", label: "Lounge" },
-            { src: "/images/mwenje/dining.webp", fallback: "/images/mwenje/dining.svg", label: "Dining" },
+            { src: "/images/mwenje/room-double-2.jpg", label: "Double ensuite" },
+            { src: "/images/mwenje/room-twin-1.jpg", label: "Twin ensuite" },
+            { src: "/images/mwenje/bathroom-bath.jpg", label: "Ensuite bathroom" },
+            { src: "/images/mwenje/room-sitting.jpg", label: "In-room sitting" },
           ].map((item) => (
             <figure key={item.label} className="min-h-52 overflow-hidden">
               <ImageSlot
                 src={item.src}
-                fallbackSrc={item.fallback}
-                alt={`Placeholder for ${item.label} at Mwenje Guest House`}
-                placeholderLabel={item.label}
+                alt={`${item.label} at Mwenje Guest House`}
                 className="h-64 w-full object-cover"
               />
               <figcaption className="mt-3 text-[0.68rem] tracking-[0.18em] text-earth uppercase">{item.label}</figcaption>
             </figure>
           ))}
         </div>
-        <p className="mt-8 max-w-2xl text-sm text-mist">
-          Property facts are drawn from public listings and still require final client verification before they are treated
-          as published operational detail. Photography of Mwenje is placeholder until approved originals are supplied.
-        </p>
         <Button to="/stay" variant="forest" className="mt-8">
           Stay at Mwenje
         </Button>
       </Section>
 
-      <Section className="bg-paper" heading="Rooms" lede="Two ensuite room types. Confirm availability for your dates.">
+      <Section className="bg-paper" heading="Rooms" lede="Five rooms for a single guest or a couple, and one twin. Confirm availability for your dates.">
         <div className="space-y-8">
           {rooms.map((room) => (
             <RoomCard key={room.id} room={room} />
@@ -182,7 +176,7 @@ export default function Home() {
           {[
             {
               title: "Sleep at Mwenje",
-              copy: "Ensuite rooms, a pool and a garden — a quiet base in Victoria Falls between days on the river and at the Falls.",
+              copy: "Ensuite rooms — five for a single guest or a couple, and one twin — with free Wi-Fi and television. A quiet base between the river and the Falls.",
             },
             {
               title: "Fish the Zambezi",
@@ -236,7 +230,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section tone="ink" heading="Gallery" lede="River, Falls and atmosphere. Mwenje property photography will replace placeholders when originals are approved.">
+      <Section tone="ink" heading="Gallery" lede="The river, the Falls, and Mwenje Guest House.">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {previewGallery.map((item) => (
             <Link key={item.id} to="/gallery" className="image-reveal is-visible block aspect-[4/3] overflow-hidden">
@@ -279,7 +273,7 @@ export default function Home() {
             },
             {
               title: "Staying at Mwenje",
-              copy: "Six ensuite rooms, about twelve guests. Breakfast, Wi-Fi, parking, a pool and a garden. Confirm room mix and check-in details when you enquire.",
+              copy: "Six ensuite rooms — five for a single guest or a couple, and one twin. Free Wi-Fi and television in every room.",
             },
           ].map((item) => (
             <div key={item.title} className="border-t border-bronze/25 pt-6">

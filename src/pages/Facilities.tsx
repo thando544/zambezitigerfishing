@@ -9,22 +9,19 @@ export default function Facilities() {
     <>
       <Seo
         title="Facilities | Mwenje Guest House"
-        description="Swimming pool, garden, lounge, dining area, kitchen facilities, breakfast, Wi-Fi, parking and air-conditioned ensuite rooms at Mwenje Guest House, Victoria Falls."
+        description="Ensuite bathrooms, free Wi-Fi and television in every room at Mwenje Guest House, Victoria Falls."
         path="/stay/facilities"
       />
       <Section className="pt-32" eyebrow="Mwenje Guest House" heading="Facilities">
         <p className="mb-12 max-w-2xl text-charcoal/80">
-          Shared spaces and property amenities drawn from public listings. Confirm anything essential to your stay when you
-          enquire.
+          Six ensuite rooms. Five are for a single guest or a couple. One is a twin with two beds. Free Wi-Fi and a television in every room.
         </p>
         <div className="grid gap-8 md:grid-cols-2">
           {propertySpaces.map((space) => (
             <article key={space.title}>
               <ImageSlot
                 src={space.image}
-                fallbackSrc={space.fallback}
-                alt={`Placeholder for ${space.title}`}
-                placeholderLabel={space.title}
+                alt={space.title}
                 className="h-64 w-full object-cover"
               />
               <h2 className="display mt-5 text-3xl">{space.title}</h2>
