@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1066" viewBox="0 0 1600 1066">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2A241C"/>
+      <stop offset="55%" stop-color="#3D3428"/>
+      <stop offset="100%" stop-color="#1A1612"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1066" fill="url(#g)"/>
+  <rect x="80" y="80" width="1440" height="906" fill="none" stroke="#B08D57" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="800" y="490" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#E8DCC8" letter-spacing="8">MWENJE GUEST HOUSE</text>
+  <text x="800" y="545" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#F3EEE4">SWIMMING POOL</text>
+  <text x="800" y="600" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#B08D57" letter-spacing="3">PLACEHOLDER — REPLACE WITH APPROVED ORIGINAL</text>
+</svg>
