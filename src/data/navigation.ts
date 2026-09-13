@@ -39,7 +39,7 @@ export const faqs: Faq[] = [
     id: "faq-rooms",
     question: "How many guests can stay at Mwenje?",
     answer:
-      "Six ensuite rooms — five for a single guest or a couple, and one twin room with two beds. Free Wi-Fi and television in every room. Confirm the exact arrangement for your dates.",
+      "Six ensuite rooms — five doubles and one twin. Each room has its own gallery. Free Wi-Fi and television in every room. Confirm the exact room for your dates.",
     category: "stay",
     published: true,
   },
@@ -82,7 +82,6 @@ export const navItems: NavItem[] = [
       { label: "Gallery", to: "/gallery?cat=mwenje" },
     ],
   },
-  { label: "Victoria Falls", to: "/victoria-falls" },
   { label: "Gallery", to: "/gallery" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },

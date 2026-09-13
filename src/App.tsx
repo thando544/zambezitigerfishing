@@ -24,7 +24,6 @@ const Accommodation = lazy(() => import("@/pages/Accommodation"))
 const Rooms = lazy(() => import("@/pages/Rooms"))
 const Room = lazy(() => import("@/pages/Room"))
 const Facilities = lazy(() => import("@/pages/Facilities"))
-const VictoriaFalls = lazy(() => import("@/pages/VictoriaFalls"))
 const Gallery = lazy(() => import("@/pages/Gallery"))
 const About = lazy(() => import("@/pages/About"))
 const Contact = lazy(() => import("@/pages/Contact"))
@@ -53,10 +52,12 @@ export default function App() {
               <Route path="/fishing/:slug" element={<FishingExperience />} />
               <Route path="/stay" element={<Accommodation />} />
               <Route path="/stay/rooms" element={<Rooms />} />
+              <Route path="/stay/rooms/double-ensuite" element={<Navigate to="/stay/rooms" replace />} />
+              <Route path="/stay/rooms/twin-ensuite" element={<Navigate to="/stay/rooms/room-6" replace />} />
               <Route path="/stay/rooms/:slug" element={<Room />} />
               <Route path="/stay/facilities" element={<Facilities />} />
               <Route path="/accommodation" element={<Navigate to="/stay" replace />} />
-              <Route path="/victoria-falls" element={<VictoriaFalls />} />
+              <Route path="/victoria-falls" element={<Navigate to="/" replace />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />

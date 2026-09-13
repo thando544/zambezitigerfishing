@@ -34,7 +34,7 @@ export function HeroVideo({
   desktopSrc = "/media/hero-desktop.mp4",
   mobileSrc = "/media/hero-mobile.mp4",
   posterSrc = "/media/hero-poster.webp",
-  fallbackImage = "/images/destination/hero-still.jpg",
+  fallbackImage = "/images/fishing/guide-boat.jpg",
   eyebrow = "Victoria Falls · Zimbabwe",
   headline,
   supporting,

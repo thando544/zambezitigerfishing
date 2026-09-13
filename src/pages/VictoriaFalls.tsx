@@ -33,15 +33,8 @@ export default function VictoriaFalls() {
         title="Victoria Falls destination guide"
         description="Victoria Falls, the Zambezi River, the National Park and the town — a calm introduction for guests staying at Mwenje or fishing with Zambezi Tiger Adventures."
         path="/victoria-falls"
-        image="/images/destination/victoria-falls.jpg"
       />
       <section className="relative min-h-[70vh] bg-ink pt-28 text-ivory">
-        <ImageSlot
-          src="/images/destination/victoria-falls.jpg"
-          alt="Victoria Falls at sunrise"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-ink/50" />
         <div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-end px-6 pb-16 md:px-10">
           <p className="eyebrow">Destination</p>
           <h1 className="display mt-4 text-5xl md:text-7xl">Welcome to Victoria Falls</h1>
@@ -60,8 +53,8 @@ export default function VictoriaFalls() {
       <section id="zambezi" className="bg-ink px-6 py-24 text-ivory md:px-10">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
           <ImageSlot
-            src="/images/destination/river-wide.jpg"
-            alt="Wide river country"
+            src="/images/fishing/river-boat.jpg"
+            alt="Guided fishing boat on the Upper Zambezi"
             className="h-[26rem] w-full object-cover"
           />
           <div>

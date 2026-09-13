@@ -38,6 +38,12 @@ export type RoomAmenity = {
   verified: boolean
 }
 
+export type RoomPhoto = {
+  src: string
+  alt: string
+  caption: string
+}
+
 export type Room = {
   id: string
   slug: string
@@ -48,12 +54,13 @@ export type Room = {
   description: string
   image: string
   imageFallback?: string
+  gallery: RoomPhoto[]
   amenities: RoomAmenity[]
   countOnProperty: number
   published: boolean
 }
 
-export type GalleryCategory = "fishing" | "zambezi" | "mwenje" | "victoria-falls"
+export type GalleryCategory = "fishing" | "zambezi" | "mwenje"
 
 export type GalleryItem = {
   id: string

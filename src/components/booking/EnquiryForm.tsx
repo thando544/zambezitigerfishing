@@ -181,7 +181,7 @@ export function EnquiryForm() {
               <option value="">No preference</option>
               {rooms.map((item) => (
                 <option key={item.id} value={item.id}>
-                  {item.name}
+                  {item.name} — {item.slug === "room-6" ? "Twin ensuite" : "Double ensuite"}
                 </option>
               ))}
             </select>

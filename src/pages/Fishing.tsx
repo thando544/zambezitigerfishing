@@ -13,12 +13,12 @@ export default function Fishing() {
         title="Tiger fishing Victoria Falls"
         description="Guided 3-hour, half-day and full-day tiger fishing on the Upper Zambezi at Victoria Falls, Zimbabwe. Enquire for current rates."
         path="/fishing"
-        image="/images/fishing/boat.jpg"
+        image="/images/fishing/guide-boat.jpg"
       />
       <section className="relative min-h-[70vh] bg-ink pt-28 text-ivory">
         <ImageSlot
-          src="/images/fishing/mist.jpg"
-          alt="Mist and dark water, standing in for the Upper Zambezi fishing atmosphere"
+          src="/images/fishing/guide-boat.jpg"
+          alt="Guide at the helm of a Zambezi Tiger Adventures fishing boat on the Upper Zambezi"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-ink/55" />

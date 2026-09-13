@@ -14,7 +14,7 @@ export default function Facilities() {
       />
       <Section className="pt-32" eyebrow="Mwenje Guest House" heading="Facilities">
         <p className="mb-12 max-w-2xl text-charcoal/80">
-          Six ensuite rooms. Five are for a single guest or a couple. One is a twin with two beds. Free Wi-Fi and a television in every room.
+          Six ensuite rooms. Five doubles and one twin. Each room has its own gallery. Free Wi-Fi and a television in every room.
         </p>
         <div className="grid gap-8 md:grid-cols-2">
           {propertySpaces.map((space) => (

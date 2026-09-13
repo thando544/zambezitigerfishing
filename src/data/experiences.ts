@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
       "Guided sport fishing on the Upper Zambezi",
       "Further inclusions, transfers and equipment are confirmed on enquiry",
     ],
-    image: "/images/fishing/cast.jpg",
+    image: "/images/fishing/crew-fishing.jpg",
     published: true,
   },
   {
@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
       "Guided sport fishing on the Upper Zambezi",
       "Further inclusions, transfers and equipment are confirmed on enquiry",
     ],
-    image: "/images/fishing/boat.jpg",
+    image: "/images/fishing/canopy-boat.jpg",
     published: true,
   },
   {
@@ -52,7 +52,7 @@ export const experiences: Experience[] = [
       "Guided sport fishing on the Upper Zambezi",
       "Further inclusions, transfers, meals and equipment are confirmed on enquiry",
     ],
-    image: "/images/fishing/water.jpg",
+    image: "/images/fishing/river-boat.jpg",
     published: true,
   },
 ]

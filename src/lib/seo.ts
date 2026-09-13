@@ -22,7 +22,7 @@ export function pageTitle(title: string) {
   return `${title} | ${SITE_NAME}`
 }
 
-export const defaultOgImage = "/images/destination/victoria-falls.jpg"
+export const defaultOgImage = "/images/fishing/guide-boat.jpg"
 
 export const jsonLdGraph = {
   "@context": "https://schema.org",
@@ -39,7 +39,7 @@ export const jsonLdGraph = {
       "@type": "LodgingBusiness",
       name: siteSettings.stayBrand,
       description:
-        "Ensuite guest house in Victoria Falls with six rooms: five for singles or couples, one twin, plus free Wi-Fi and television.",
+        "Ensuite guest house in Victoria Falls with six rooms: five doubles and one twin. Each room has its own gallery. Free Wi-Fi and television.",
       numberOfRooms: 6,
       amenityFeature: [
         { "@type": "LocationFeatureSpecification", name: "Swimming pool" },

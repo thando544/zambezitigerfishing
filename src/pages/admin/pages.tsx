@@ -59,7 +59,7 @@ export function AdminRooms() {
           <li key={item.id} className="border border-bronze/20 bg-ivory px-5 py-4">
             <p className="display text-2xl">{item.name}</p>
             <p className="mt-1 text-sm text-mist">
-              {item.countOnProperty} rooms · max {item.maxGuests} guests
+              {item.gallery.length} photographs · max {item.maxGuests} guests
             </p>
           </li>
         ))}

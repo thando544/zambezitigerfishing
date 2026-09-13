@@ -26,7 +26,7 @@ export async function getExperiences(): Promise<Experience[]> {
         startTime: row.start_time ?? "",
         guestCapacity: row.guest_capacity ?? "",
         inclusions: row.inclusions ?? [],
-        image: row.image ?? "/images/fishing/boat.jpg",
+        image: row.image ?? "/images/fishing/guide-boat.jpg",
         published: Boolean(row.published),
       }))
     }
@@ -52,6 +52,9 @@ export async function getRooms(): Promise<Room[]> {
         description: row.description ?? "",
         image: row.image ?? "",
         imageFallback: row.image_fallback ?? undefined,
+        gallery: Array.isArray(row.gallery) && row.gallery.length > 0
+          ? row.gallery
+          : [{ src: row.image ?? "", alt: row.name, caption: row.name }],
         countOnProperty: row.count_on_property ?? 1,
         published: Boolean(row.published),
         amenities: (row.room_amenities ?? []).map((amenity: { key: string; label: string; verified: boolean }) => ({

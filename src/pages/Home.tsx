@@ -44,14 +44,14 @@ export default function Home() {
         className="pb-8 md:pb-10"
       >
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-          <article className="group relative min-h-[32rem] overflow-hidden bg-ink text-ivory">
+          <article className="group relative min-h-128 overflow-hidden bg-ink text-ivory">
             <ImageSlot
-              src="/images/fishing/boat.jpg"
-              alt="Open water from a small fishing boat, standing in for Upper Zambezi sport fishing"
+              src="/images/fishing/guide-boat.jpg"
+              alt="Guide at the helm of a Zambezi Tiger Adventures fishing boat on the Upper Zambezi"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-ink/10" />
-            <div className="relative flex h-full min-h-[32rem] flex-col justify-end p-8 md:p-10">
+            <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/35 to-ink/10" />
+            <div className="relative flex h-full min-h-128 flex-col justify-end p-8 md:p-10">
               <ZambeziLogo onDark className="mb-6 h-14 w-auto md:h-16" />
               <p className="eyebrow">Zambezi Tiger Adventures</p>
               <h3 className="display mt-3 text-4xl md:text-5xl">Fish the Upper Zambezi</h3>
@@ -64,19 +64,19 @@ export default function Home() {
               </Button>
             </div>
           </article>
-          <article className="group relative min-h-[32rem] overflow-hidden bg-forest text-ivory">
+          <article className="group relative min-h-128 overflow-hidden bg-forest text-ivory">
             <ImageSlot
-              src="/images/mwenje/room-double-2.jpg"
-              alt="Double ensuite room at Mwenje Guest House"
+              src="/images/mwenje/exterior.jpg"
+              alt="Mwenje Guest House in Victoria Falls"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/50 to-forest/20" />
-            <div className="relative flex h-full min-h-[32rem] flex-col justify-end p-8 md:p-10">
+            <div className="absolute inset-0 bg-linear-to-t from-forest via-forest/50 to-forest/20" />
+            <div className="relative flex h-full min-h-128 flex-col justify-end p-8 md:p-10">
               <MwenjeLogo onDark className="mb-6 h-16 w-auto" />
               <p className="eyebrow">Mwenje Guest House</p>
               <h3 className="display mt-3 text-4xl md:text-5xl">A base in Victoria Falls</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ivory/80">
-                A comfortable Victoria Falls base with ensuite rooms — five for a single guest or a couple, and one twin — with free Wi-Fi and television in every room.
+                Six ensuite rooms — five doubles and one twin — each with its own gallery. Free Wi-Fi and television in every room.
               </p>
               <Button to="/stay" variant="ivory" className="mt-8 w-fit">
                 Explore Mwenje
@@ -99,10 +99,10 @@ export default function Home() {
         </div>
       </Section>
 
-      <section className="relative min-h-[36rem] overflow-hidden bg-ink text-ivory">
+      <section className="relative min-h-144 overflow-hidden bg-ink text-ivory">
         <ImageSlot
-          src="/images/destination/river-wide.jpg"
-          alt="Wide river landscape suggesting the scale of the Zambezi"
+          src="/images/fishing/river-boat.jpg"
+          alt="Guided fishing boat underway on the Upper Zambezi"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-ink/55" />
@@ -143,10 +143,10 @@ export default function Home() {
         </div>
         <div className="mt-14 grid gap-4 md:grid-cols-4">
           {[
+            { src: "/images/mwenje/exterior.jpg", label: "The house" },
             { src: "/images/mwenje/room-double-2.jpg", label: "Double ensuite" },
-            { src: "/images/mwenje/room-twin-1.jpg", label: "Twin ensuite" },
-            { src: "/images/mwenje/bathroom-bath.jpg", label: "Ensuite bathroom" },
-            { src: "/images/mwenje/room-sitting.jpg", label: "In-room sitting" },
+            { src: "/images/mwenje/room-twin-2.jpg", label: "Twin ensuite" },
+            { src: "/images/mwenje/pool-terrace.jpg", label: "Swimming pool" },
           ].map((item) => (
             <figure key={item.label} className="min-h-52 overflow-hidden">
               <ImageSlot
@@ -163,8 +163,12 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section className="bg-paper" heading="Rooms" lede="Five rooms for a single guest or a couple, and one twin. Confirm availability for your dates.">
-        <div className="space-y-8">
+      <Section
+        className="bg-paper"
+        heading="The six rooms"
+        lede="Five doubles and one twin. Each room has its own gallery. Confirm availability for your dates."
+      >
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {rooms.map((room) => (
             <RoomCard key={room.id} room={room} />
           ))}
@@ -176,7 +180,7 @@ export default function Home() {
           {[
             {
               title: "Sleep at Mwenje",
-              copy: "Ensuite rooms — five for a single guest or a couple, and one twin — with free Wi-Fi and television. A quiet base between the river and the Falls.",
+              copy: "Six ensuite rooms — five doubles and one twin — with free Wi-Fi and television. Each room has its own gallery. A quiet base between the river and the Falls.",
             },
             {
               title: "Fish the Zambezi",
@@ -198,42 +202,10 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section eyebrow="Destination" heading="Welcome to Victoria Falls">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-          <ImageSlot
-            src="/images/destination/victoria-falls.jpg"
-            alt="Victoria Falls at sunrise with mist in the gorge"
-            className="h-[28rem] w-full object-cover"
-          />
-          <div>
-            <p className="text-base leading-relaxed text-charcoal/80 md:text-lg">
-              Victoria Falls is both a town and one of the great waterfalls of the world. The river that feeds it is the
-              same river we fish. Guests often combine a stay, time on the water, and time at the Falls themselves.
-            </p>
-            <ul className="mt-8 space-y-3 text-sm">
-              {[
-                "Victoria Falls",
-                "Victoria Falls National Park",
-                "The Zambezi River",
-                "David Livingstone Statue",
-                "The Big Tree",
-              ].map((place) => (
-                <li key={place} className="border-b border-bronze/15 pb-3 tracking-[0.04em]">
-                  {place}
-                </li>
-              ))}
-            </ul>
-            <Button to="/victoria-falls" variant="forest" className="mt-8">
-              Explore the destination
-            </Button>
-          </div>
-        </div>
-      </Section>
-
-      <Section tone="ink" heading="Gallery" lede="The river, the Falls, and Mwenje Guest House.">
+      <Section tone="ink" heading="Gallery" lede="Fishing on the Upper Zambezi, and the rooms at Mwenje.">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {previewGallery.map((item) => (
-            <Link key={item.id} to="/gallery" className="image-reveal is-visible block aspect-[4/3] overflow-hidden">
+            <Link key={item.id} to="/gallery" className="image-reveal is-visible block aspect-4/3 overflow-hidden">
               <ImageSlot src={item.src} alt={item.alt} />
             </Link>
           ))}
@@ -273,7 +245,7 @@ export default function Home() {
             },
             {
               title: "Staying at Mwenje",
-              copy: "Six ensuite rooms — five for a single guest or a couple, and one twin. Free Wi-Fi and television in every room.",
+              copy: "Six ensuite rooms — five doubles and one twin. Each room has its own gallery. Free Wi-Fi and television in every room.",
             },
           ].map((item) => (
             <div key={item.title} className="border-t border-bronze/25 pt-6">
@@ -287,14 +259,14 @@ export default function Home() {
         </Button>
       </Section>
 
-      <section className="relative min-h-[28rem] overflow-hidden bg-ink text-ivory">
+      <section className="relative min-h-112 overflow-hidden bg-ink text-ivory">
         <ImageSlot
-          src="/images/destination/african-dusk.jpg"
-          alt="Trees against an African dusk"
+          src="/images/fishing/guide-boat.jpg"
+          alt="Guide at the helm of a Zambezi Tiger Adventures fishing boat"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-ink/60" />
-        <div className="relative mx-auto flex min-h-[28rem] max-w-6xl flex-col items-start justify-center px-6 py-24 md:px-10">
+        <div className="relative mx-auto flex min-h-112 max-w-6xl flex-col items-start justify-center px-6 py-24 md:px-10">
           <h2 className="display text-5xl md:text-7xl">The Zambezi is waiting.</h2>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button to="/book?interest=fishing" variant="gold" size="lg">

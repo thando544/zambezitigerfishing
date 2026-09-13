@@ -81,21 +81,21 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="eyebrow">Destination</p>
+            <p className="eyebrow">Plan</p>
             <ul className="mt-5 space-y-2 text-sm text-ivory/75">
-              <li>
-                <Link to="/victoria-falls" className="no-underline hover:text-bronze">
-                  Victoria Falls
-                </Link>
-              </li>
-              <li>
-                <Link to="/victoria-falls#zambezi" className="no-underline hover:text-bronze">
-                  The Zambezi
-                </Link>
-              </li>
               <li>
                 <Link to="/plan" className="no-underline hover:text-bronze">
                   Travel Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="no-underline hover:text-bronze">
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="no-underline hover:text-bronze">
+                  About
                 </Link>
               </li>
             </ul>

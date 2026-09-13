@@ -4,38 +4,31 @@ import { ImageSlot } from "@/components/ui/ImageSlot"
 import { Button } from "@/components/ui/Button"
 
 export function RoomCard({ room }: { room: Room }) {
-  const verified = room.amenities.filter((item) => item.verified)
-
   return (
-    <article className="grid overflow-hidden border border-bronze/20 md:grid-cols-2">
-      <Link to={`/stay/rooms/${room.slug}`} className="min-h-64">
+    <article className="flex h-full flex-col border border-bronze/20 bg-paper">
+      <Link to={`/stay/rooms/${room.slug}`} className="block overflow-hidden">
         <ImageSlot
           src={room.image}
           fallbackSrc={room.imageFallback}
           alt={`${room.name} at Mwenje Guest House`}
           placeholderLabel={room.name}
+          className="aspect-4/3 h-auto w-full object-cover"
         />
       </Link>
-      <div className="flex flex-col bg-paper px-6 py-8 md:px-10 md:py-12">
+      <div className="flex flex-1 flex-col px-6 py-7">
         <p className="eyebrow">Mwenje Guest House</p>
-        <h3 className="display mt-3 text-4xl">
+        <h3 className="display mt-3 text-3xl">
           <Link to={`/stay/rooms/${room.slug}`} className="no-underline">
             {room.name}
           </Link>
         </h3>
-        <p className="mt-4 text-sm leading-relaxed text-charcoal/80">{room.description}</p>
-        <ul className="mt-6 space-y-2 text-sm text-charcoal/85">
-          <li>{room.bedConfiguration}</li>
-          <li>{room.bathroom}</li>
-          <li>Up to {room.maxGuests} guests</li>
-          <li>{room.countOnProperty} of this room type on the property</li>
-          {verified.map((item) => (
-            <li key={item.key}>{item.label}</li>
-          ))}
-        </ul>
-        <p className="mt-6 text-[0.68rem] tracking-[0.18em] text-earth uppercase">Confirm availability</p>
-        <Button to={`/book?interest=accommodation&room=${room.slug}`} variant="forest" className="mt-5 w-fit">
-          Enquire now
+        <p className="mt-3 text-sm text-charcoal/80">{room.bedConfiguration}</p>
+        <p className="mt-2 text-sm text-charcoal/80">{room.bathroom} · up to {room.maxGuests} guests</p>
+        <p className="mt-4 text-[0.68rem] tracking-[0.18em] text-earth uppercase">
+          {room.gallery.length} photographs
+        </p>
+        <Button to={`/stay/rooms/${room.slug}`} variant="forest" className="mt-6 w-fit">
+          View room
         </Button>
       </div>
     </article>

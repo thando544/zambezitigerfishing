@@ -10,7 +10,6 @@ const filters: { id: "all" | GalleryCategory; label: string }[] = [
   { id: "fishing", label: "Fishing" },
   { id: "zambezi", label: "Zambezi" },
   { id: "mwenje", label: "Mwenje" },
-  { id: "victoria-falls", label: "Victoria Falls" },
 ]
 
 export function GalleryGrid({ items }: { items: GalleryItem[] }) {

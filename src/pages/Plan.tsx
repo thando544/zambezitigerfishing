@@ -42,7 +42,7 @@ export default function Plan() {
           <article>
             <h2 className="display text-3xl">Accommodation</h2>
             <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
-              Mwenje has six ensuite rooms: five for a single guest or a couple, and one twin with two beds. Free Wi-Fi and television in every room. Confirm check-in details when you enquire.
+              Mwenje has six ensuite rooms: five doubles and one twin. Each room has its own gallery. Free Wi-Fi and television in every room. Public listings give check-in at 14:00 and check-out at 10:00 — confirm when you enquire.
             </p>
           </article>
           <article>
