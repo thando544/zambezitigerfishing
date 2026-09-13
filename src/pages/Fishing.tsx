@@ -47,8 +47,8 @@ export default function Fishing() {
           <p className="eyebrow">Zambezi Tiger Adventures</p>
           <h1 className="display mt-4 max-w-3xl text-5xl md:text-7xl">Tiger fishing Victoria Falls</h1>
           <p className="mt-6 max-w-xl text-ivory/80">
-            Guided sport fishing for African tigerfish on the Upper Zambezi, above the Falls. Three durations. Rates on
-            enquiry.
+            Guided sport fishing for African tigerfish on the Upper Zambezi, above the Falls. Three durations. Rates are
+            confirmed on enquiry.
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function Fishing() {
           <article className="border-t border-bronze/25 pt-6">
             <h3 className="display text-3xl">The fish</h3>
             <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
-              Tigerfish are a fast freshwater predator. Other species are present in the system. What you catch depends
+              Tigerfish are fast freshwater predators. Other species are present in the system. What you catch depends
               on the river that day, not a promise on a website.
             </p>
           </article>
@@ -72,7 +72,7 @@ export default function Fishing() {
             </p>
           </article>
           <article className="border-t border-bronze/25 pt-6">
-            <h3 className="display text-3xl">Who it is for</h3>
+            <h3 className="display text-3xl">Who this is for</h3>
             <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
               Beginners and experienced anglers both come here. Tell us the truth about your level so the trip can be
               shaped around it. Rates, start times and boat capacity are confirmed on enquiry.

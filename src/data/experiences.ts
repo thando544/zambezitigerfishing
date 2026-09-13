@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     shortDescription:
       "A focused session on the Upper Zambezi — time on the water without committing the whole day.",
     description:
-      "A three-hour guided fishing trip on the Upper Zambezi, above Victoria Falls. Designed for guests who want a serious introduction to tiger fishing, or a shorter window on the river between other plans. Start times, meeting point and what is provided on the boat are confirmed when you enquire.",
+      "A three-hour guided fishing trip on the Upper Zambezi, above Victoria Falls. Designed for guests who want a serious introduction to tiger fishing or a shorter window on the river between other plans. Start times, meeting point and what is provided on the boat are confirmed when you enquire.",
     startTime: "Start times are confirmed on enquiry. Morning and afternoon windows may be available.",
     guestCapacity: "Boat capacity is confirmed when you enquire.",
     inclusions: [

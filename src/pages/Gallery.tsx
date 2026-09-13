@@ -16,7 +16,7 @@ export default function Gallery() {
         className="pt-32"
         eyebrow="Look"
         heading="Gallery"
-        lede="Fishing on the Upper Zambezi, and the rooms at Mwenje."
+        lede="Fishing on the Upper Zambezi and the rooms at Mwenje."
       >
         <GalleryGrid items={galleryItems} />
       </Section>

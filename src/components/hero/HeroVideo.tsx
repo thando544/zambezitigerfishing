@@ -168,13 +168,15 @@ export function HeroVideo({
 
       <a
         href="#two-experiences"
+        aria-label="Scroll to content"
         className={cn(
           "absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-ivory/70 no-underline",
         )}
       >
-        <span className="text-[0.62rem] tracking-[0.28em] uppercase">Scroll</span>
+        <span className="text-[0.62rem] tracking-[0.28em] uppercase" aria-hidden="true">
+          Scroll
+        </span>
         <span className="block h-10 w-px bg-ivory/50" aria-hidden="true" />
-        <span className="sr-only">Continue to content</span>
       </a>
     </section>
   )

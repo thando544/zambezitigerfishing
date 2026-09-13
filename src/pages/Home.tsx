@@ -35,7 +35,7 @@ export default function Home() {
         desktopSrc={bannerVideo}
         mobileSrc={bannerVideo}
         headline="Tiger fishing Victoria Falls"
-        supporting="Guided trips on the Upper Zambezi, and a six-bedroom stay at Mwenje Guest House."
+        supporting="Guided trips on the Upper Zambezi and a six-bedroom stay at Mwenje Guest House."
         primaryCta={{ label: "Fish the Zambezi", to: "/fishing" }}
         secondaryCta={{ label: "Stay at Mwenje", to: "/stay" }}
       />
@@ -60,7 +60,7 @@ export default function Home() {
               <h3 className="display mt-3 text-4xl md:text-5xl">Tiger fishing Victoria Falls</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ivory/80">
                 Guided tiger fishing on the Upper Zambezi — 3-hour, half-day and full-day trips for beginners and
-                experienced anglers. Rates confirmed on enquiry.
+                experienced anglers. Rates are confirmed on enquiry.
               </p>
               <Button to="/fishing" variant="gold" className="mt-8 w-fit">
                 Explore fishing
@@ -201,8 +201,8 @@ export default function Home() {
               copy: "Three-hour, half-day and full-day guided fishing on the Upper Zambezi, shaped around the conditions of the day.",
             },
             {
-              title: "Walk the destination",
-              copy: "Victoria Falls, the river, the National Park and the town sit around the same stay. We help you plan the days, not overpromise them.",
+              title: "Explore the destination",
+              copy: "Victoria Falls, the river, the National Park and the town sit around the same stay. We help you plan the days without overpromising them.",
             },
           ].map((item) => (
             <div key={item.title} className="border-t border-bronze/30 pt-6">
@@ -216,7 +216,7 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section tone="ink" heading="Gallery" lede="Fishing on the Upper Zambezi, and the rooms at Mwenje.">
+      <Section tone="ink" heading="Gallery" lede="Fishing on the Upper Zambezi and the rooms at Mwenje.">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {previewGallery.map((item) => (
             <Link key={item.id} to="/gallery" className="image-reveal is-visible block aspect-4/3 overflow-hidden">
@@ -250,12 +250,12 @@ export default function Home() {
               copy: "Tiger fishing is practised on the Upper Zambezi through the year. Water levels change. Ask us for current river advice when you choose dates.",
             },
             {
-              title: "What to bring fishing",
-              copy: "Sun protection, polarised sunglasses, a hat, layers for cool mornings, and shoes that belong on a boat. Confirm tackle when you enquire.",
+              title: "What to bring on the water",
+              copy: "Bring sun protection, polarised sunglasses, a hat, layers for cool mornings, and shoes that belong on a boat. Confirm tackle when you enquire.",
             },
             {
               title: "Experience level",
-              copy: "Tell us whether you are new to fishing or already at home on a river. The trip can be discussed around that.",
+              copy: "Tell us whether you are new to fishing or already at home on a river. The trip can be planned around that.",
             },
             {
               title: "Staying at Mwenje",

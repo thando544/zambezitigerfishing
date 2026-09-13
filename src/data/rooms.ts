@@ -51,7 +51,7 @@ const sharedSpaces = {
 }
 
 const ensuiteLine =
-  "Private ensuite bathroom, free Wi-Fi, television and air conditioning. Bath or shower is confirmed with the room."
+  "Private ensuite bathroom, free Wi-Fi, television and air conditioning. Whether the bathroom has a bath or a shower is confirmed with the room."
 
 const unmatchedNote =
   " A dedicated bedroom photograph for this numbered room has not yet been matched. The gallery shows in-room spaces and the ensuite and garden areas that come with a stay at Mwenje."

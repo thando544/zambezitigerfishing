@@ -10,7 +10,7 @@ export default function Plan() {
     <>
       <Seo
         title="Plan a Victoria Falls Trip | Tiger Fishing & Mwenje Guest House"
-        description="When to tiger fish the Upper Zambezi, what to bring, and how a stay at Mwenje Guest House works. Practical notes for Victoria Falls, Zimbabwe."
+        description="When to go tiger fishing on the Upper Zambezi, what to bring, and how a stay at Mwenje Guest House works. Practical notes for Victoria Falls, Zimbabwe."
         path="/plan"
         titleTemplate={false}
         jsonLd={[
@@ -31,15 +31,16 @@ export default function Plan() {
           <article>
             <h2 className="display text-3xl">When to visit</h2>
             <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
-              Fishing on the Upper Zambezi is not limited to a single month. Water levels and weather change. High water
-              and low water fish differently. Ask us what the river is doing when you have dates in mind.
+              Fishing on the Upper Zambezi is not limited to a single month. Water levels and weather change. The river
+              fishes differently in high water and low water. Ask us what the river is doing when you have dates in mind.
             </p>
           </article>
           <article>
-            <h2 className="display text-3xl">What to bring fishing</h2>
+            <h2 className="display text-3xl">What to bring on the water</h2>
             <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
-              Hat, polarised sunglasses, sun protection, a long-sleeved shirt, layers for cool mornings, and boat-sensible
-              shoes. If you have a preferred rod, say so. Confirm whether tackle is provided when you enquire.
+              Bring a hat, polarised sunglasses, sun protection, a long-sleeved shirt, layers for cool mornings, and
+              boat-sensible shoes. If you have a preferred rod, say so. Confirm whether tackle is provided when you
+              enquire.
             </p>
           </article>
           <article>

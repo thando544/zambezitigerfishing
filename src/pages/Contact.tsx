@@ -37,7 +37,7 @@ export default function Contact() {
     <>
       <Seo
         title="Contact | Tiger Fishing & Mwenje Guest House Victoria Falls"
-        description="Contact Zambezi Tiger Adventures and Mwenje Guest House in Victoria Falls, Zimbabwe. Enquire about tiger fishing on the Upper Zambezi or a guest-house stay."
+        description="Contact Zambezi Tiger Adventures and Mwenje Guest House in Victoria Falls, Zimbabwe. Enquire about tiger fishing on the Upper Zambezi or a guest house stay."
         path="/contact"
         titleTemplate={false}
       />

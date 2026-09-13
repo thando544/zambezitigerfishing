@@ -51,8 +51,8 @@ export default function Accommodation() {
           <p className="eyebrow text-bronze-soft">Mwenje Guest House · Victoria Falls</p>
           <h1 className="display mt-4 max-w-3xl text-5xl md:text-7xl">Mwenje Guest House Victoria Falls</h1>
           <p className="mt-6 max-w-xl text-ivory/78">
-            A six-bedroom ensuite guest house in Victoria Falls, Zimbabwe. Sleeps 12 — three kings, one double and two
-            twins. Swimming pool, free Wi-Fi and television. Enquire here for a direct stay.
+            A six-bedroom guest house in Victoria Falls, Zimbabwe, with ensuite rooms. Sleeps 12 — three kings, one
+            double and two twins. Swimming pool, free Wi-Fi and television. Enquire here for a direct stay.
           </p>
         </div>
       </section>
@@ -84,7 +84,7 @@ export default function Accommodation() {
       <Section
         heading="The six rooms"
         tone="ivory"
-        lede="Three kings, one double and two twins. Sleeps 12. Open a room for its gallery."
+        lede="Three kings, one double and two twins. Sleeps 12. Open a room to see its gallery."
       >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {rooms.map((room) => (
@@ -109,8 +109,7 @@ export default function Accommodation() {
           and{" "}
           <a href={LISTINGS.airbnb} rel="noopener noreferrer" target="_blank">
             Airbnb
-          </a>
-          . Public listings give check-in at 14:00 and check-out at 10:00 — confirm when you enquire.
+          </a>. Public listings give check-in at 14:00 and check-out at 10:00 — confirm both when you enquire.
         </p>
       </Section>
       <Section heading="Mwenje Guest House questions" className="pt-0">

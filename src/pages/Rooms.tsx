@@ -37,7 +37,7 @@ export default function Rooms() {
           <h1 className="display mt-4 max-w-3xl text-5xl md:text-6xl">Six ensuite rooms</h1>
         </div>
       </section>
-      <Section eyebrow="The rooms" heading="Sleeps 12, six bedrooms">
+      <Section eyebrow="The rooms" heading="Six bedrooms, sleeping 12">
         <p className="mb-12 max-w-2xl text-charcoal/80">
           Six bedrooms, sleeping 12. Rooms 1, 3 and 5 have a king bed. Room 4 has a double. Rooms 2 and 6 have two
           single beds. Every room has a private bathroom, free Wi-Fi, television and air conditioning. Each room has

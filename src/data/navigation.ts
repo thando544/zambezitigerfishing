@@ -7,13 +7,13 @@ export const faqs: Faq[] = [
     id: "faq-what-is-tiger",
     question: "What is tiger fishing in Victoria Falls?",
     answer:
-      "Tiger fishing here means guided sport fishing for African tigerfish on the Upper Zambezi, the stretch of river above Victoria Falls. It is a serious freshwater predator. What you catch on a given day depends on the river, not a promise.",
+      "Tiger fishing here means guided sport fishing for African tigerfish on the Upper Zambezi, the stretch of river above Victoria Falls. The tigerfish is a serious freshwater predator. What you catch on a given day depends on the river, not a promise.",
     category: "fishing",
     published: true,
   },
   {
     id: "faq-where-fish",
-    question: "Where do you tiger fish from Victoria Falls?",
+    question: "Where do you go tiger fishing from Victoria Falls?",
     answer:
       "On the Upper Zambezi, the stretch of river above the Falls. Meeting point, launch and transfers are confirmed when you enquire.",
     category: "fishing",

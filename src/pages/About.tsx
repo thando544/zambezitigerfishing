@@ -19,17 +19,17 @@ export default function About() {
             <h2 className="display text-4xl">Zambezi Tiger Adventures</h2>
             <p className="mt-5 leading-relaxed text-charcoal/80">
               Guided tiger fishing on the Upper Zambezi at Victoria Falls. Three-hour, half-day and full-day trips for
-              African tigerfish. We do not publish unverified records, guide biographies or prices. If you want the river,
-              write to us.
+              the African tigerfish. We do not publish unverified records, guide biographies or prices. If you want the
+              river, write to us.
             </p>
           </div>
           <div>
             <MwenjeLogo className="mb-6 h-20" />
             <h2 className="display text-4xl">Mwenje Guest House</h2>
             <p className="mt-5 leading-relaxed text-charcoal/80">
-              A six-bedroom ensuite guest house in Victoria Falls, sleeping 12 — three kings, one double and two twins.
-              Already listed on the holiday-rental platforms travellers use. Each room has its own photograph gallery. Free
-              Wi-Fi, television and a swimming pool.
+              A six-bedroom guest house in Victoria Falls, sleeping 12 — three kings, one double and two twins. It is
+              already listed on the holiday-rental platforms travellers use. Each room has its own photograph gallery.
+              Free Wi-Fi and television in every room, and a swimming pool on the property.
             </p>
           </div>
         </div>

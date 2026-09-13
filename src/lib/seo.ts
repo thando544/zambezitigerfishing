@@ -66,7 +66,7 @@ export function fishingOrganization() {
     "@id": absoluteUrl("/fishing#business"),
     name: siteSettings.fishingBrand,
     description:
-      "Guided tiger fishing on the Upper Zambezi at Victoria Falls, Zimbabwe. Three-hour, half-day and full-day sport fishing trips. Rates on enquiry.",
+      "Guided tiger fishing on the Upper Zambezi at Victoria Falls, Zimbabwe. Three-hour, half-day and full-day sport fishing trips. Rates are confirmed on enquiry.",
     url: absoluteUrl("/fishing"),
     image: absoluteUrl("/images/fishing/guide-boat.jpg"),
     areaServed: {
@@ -85,7 +85,7 @@ export function lodgingBusiness() {
     "@id": absoluteUrl("/stay#business"),
     name: siteSettings.stayBrand,
     description:
-      "Mwenje Guest House in Victoria Falls, Zimbabwe. Six ensuite bedrooms sleeping 12: three kings, one double and two twins. Swimming pool, free Wi-Fi and television. Listed on major holiday-rental platforms. Rates on enquiry.",
+      "Mwenje Guest House in Victoria Falls, Zimbabwe. Six ensuite bedrooms sleeping 12: three kings, one double and two twins. Swimming pool, free Wi-Fi and television. Listed on major holiday-rental platforms. Rates are confirmed on enquiry.",
     url: absoluteUrl("/stay"),
     image: absoluteUrl("/images/mwenje/exterior.jpg"),
     numberOfRooms: 6,

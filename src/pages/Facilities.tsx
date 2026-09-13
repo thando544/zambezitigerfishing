@@ -38,8 +38,8 @@ export default function Facilities() {
       </section>
       <Section eyebrow="The property" heading="What comes with a stay">
         <p className="mb-12 max-w-2xl text-charcoal/80">
-          A six-bedroom guest house in Victoria Falls with a swimming pool, lounge and reception. Every room is ensuite,
-          air-conditioned, and has free Wi-Fi and television.
+          A six-bedroom guest house in Victoria Falls with a swimming pool, lounge and reception. Every room is ensuite
+          and air-conditioned, and has free Wi-Fi and television.
         </p>
         <div className="grid gap-8 md:grid-cols-2">
           {propertySpaces.map((space) => (
