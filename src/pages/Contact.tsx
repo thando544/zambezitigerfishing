@@ -36,9 +36,10 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact"
-        description="Enquire about tiger fishing on the Upper Zambezi or a stay at Mwenje Guest House, Victoria Falls."
+        title="Contact | Tiger Fishing & Mwenje Guest House Victoria Falls"
+        description="Contact Zambezi Tiger Adventures and Mwenje Guest House in Victoria Falls, Zimbabwe. Enquire about tiger fishing on the Upper Zambezi or a guest-house stay."
         path="/contact"
+        titleTemplate={false}
       />
       <Section className="pt-32" eyebrow="Contact" heading="Write to us">
         <div className="grid gap-14 lg:grid-cols-2">

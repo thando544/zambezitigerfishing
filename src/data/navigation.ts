@@ -4,6 +4,30 @@ export const reviews: Review[] = []
 
 export const faqs: Faq[] = [
   {
+    id: "faq-what-is-tiger",
+    question: "What is tiger fishing in Victoria Falls?",
+    answer:
+      "Tiger fishing here means guided sport fishing for African tigerfish on the Upper Zambezi, the stretch of river above Victoria Falls. It is a serious freshwater predator. What you catch on a given day depends on the river, not a promise.",
+    category: "fishing",
+    published: true,
+  },
+  {
+    id: "faq-where-fish",
+    question: "Where do you tiger fish from Victoria Falls?",
+    answer:
+      "On the Upper Zambezi, the stretch of river above the Falls. Meeting point, launch and transfers are confirmed when you enquire.",
+    category: "fishing",
+    published: true,
+  },
+  {
+    id: "faq-trips",
+    question: "What tiger fishing trips do you run?",
+    answer:
+      "Three guided trips: 3-hour, half-day and full-day tiger fishing on the Upper Zambezi. Rates, start times and boat capacity are confirmed on enquiry.",
+    category: "fishing",
+    published: true,
+  },
+  {
     id: "faq-experience",
     question: "Do I need fishing experience?",
     answer:
@@ -36,10 +60,42 @@ export const faqs: Faq[] = [
     published: true,
   },
   {
+    id: "faq-checkin",
+    question: "What are check-in and check-out times at Mwenje Guest House?",
+    answer:
+      "Public listings give check-in at 14:00 and check-out at 10:00. Confirm both when you enquire — this is not a locked booking rule on this site.",
+    category: "stay",
+    published: true,
+  },
+  {
+    id: "faq-where-stay",
+    question: "Where is Mwenje Guest House?",
+    answer:
+      "Victoria Falls, Zimbabwe. Public listings place the house in town, near Victoria Falls National Park. We will not invent a street address or walking times. Ask us for current access notes.",
+    category: "stay",
+    published: true,
+  },
+  {
+    id: "faq-listings",
+    question: "Is Mwenje Guest House listed on holiday-rental platforms?",
+    answer:
+      "Yes. The house is listed on major holiday-rental platforms including Vrbo and Airbnb. You can also enquire here for a direct stay. A listing is not a confirmed booking on this site.",
+    category: "stay",
+    published: true,
+  },
+  {
+    id: "faq-pool-wifi",
+    question: "Does Mwenje Guest House have a pool and Wi-Fi?",
+    answer:
+      "Yes. There is a swimming pool on the property, and free Wi-Fi and television in every room. Rooms are ensuite and air-conditioned.",
+    category: "stay",
+    published: true,
+  },
+  {
     id: "faq-rooms",
     question: "How many guests can stay at Mwenje?",
     answer:
-      "Six ensuite rooms — five doubles and one twin. Each room has its own gallery. Free Wi-Fi and television in every room. Confirm the exact room for your dates.",
+      "Six bedrooms, sleeping 12: three kings, one double and two twins. Each room has its own gallery. Free Wi-Fi and television in every room. Confirm the exact room for your dates.",
     category: "stay",
     published: true,
   },
@@ -67,9 +123,9 @@ export const navItems: NavItem[] = [
     to: "/fishing",
     children: [
       { label: "Fishing", to: "/fishing" },
-      { label: "3-Hour Fishing", to: "/fishing/3-hour-fishing" },
-      { label: "Half-Day Fishing", to: "/fishing/half-day-fishing" },
-      { label: "Full-Day Fishing", to: "/fishing/full-day-fishing" },
+      { label: "3-Hour Tiger Fishing", to: "/fishing/3-hour-fishing" },
+      { label: "Half-Day Tiger Fishing", to: "/fishing/half-day-fishing" },
+      { label: "Full-Day Tiger Fishing", to: "/fishing/full-day-fishing" },
     ],
   },
   {

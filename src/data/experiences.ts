@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     id: "exp-3-hour",
     slug: "3-hour-fishing",
-    name: "3-Hour Fishing",
+    name: "3-Hour Tiger Fishing",
     duration: "3 hours",
     shortDescription:
       "A focused session on the Upper Zambezi — time on the water without committing the whole day.",
@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
   {
     id: "exp-half-day",
     slug: "half-day-fishing",
-    name: "Half-Day Fishing",
+    name: "Half-Day Tiger Fishing",
     duration: "Half day",
     shortDescription:
       "More hours on the river to work the channels, the light and the conditions.",
@@ -40,7 +40,7 @@ export const experiences: Experience[] = [
   {
     id: "exp-full-day",
     slug: "full-day-fishing",
-    name: "Full-Day Fishing",
+    name: "Full-Day Tiger Fishing",
     duration: "Full day",
     shortDescription:
       "A full day given to the Zambezi — the most complete way to fish this stretch of river.",

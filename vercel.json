@@ -3,6 +3,9 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/((?!assets/|images/|llms\\.txt|robots\\.txt|sitemap\\.xml|favicon|apple-touch-icon).*)",
+      "destination": "/index.html"
+    }
   ]
 }

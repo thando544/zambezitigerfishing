@@ -1,15 +1,25 @@
 import { Seo } from "@/components/seo/Seo"
 import { Section } from "@/components/ui/Section"
 import { Button } from "@/components/ui/Button"
+import { FaqList } from "@/components/seo/FaqList"
 import { faqs } from "@/data/navigation"
+import { breadcrumbJsonLd, faqJsonLd } from "@/lib/seo"
 
 export default function Plan() {
   return (
     <>
       <Seo
-        title="Plan your Victoria Falls trip"
-        description="When to visit, what to bring fishing, staying at Mwenje Guest House, and how to enquire — a practical page for Victoria Falls."
+        title="Plan a Victoria Falls Trip | Tiger Fishing & Mwenje Guest House"
+        description="When to tiger fish the Upper Zambezi, what to bring, and how a stay at Mwenje Guest House works. Practical notes for Victoria Falls, Zimbabwe."
         path="/plan"
+        titleTemplate={false}
+        jsonLd={[
+          faqJsonLd(faqs.filter((item) => item.published)),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Plan your trip", path: "/plan" },
+          ]),
+        ]}
       />
       <Section
         className="pt-32"
@@ -42,7 +52,7 @@ export default function Plan() {
           <article>
             <h2 className="display text-3xl">Accommodation</h2>
             <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
-              Mwenje has six ensuite rooms: five doubles and one twin. Each room has its own gallery. Free Wi-Fi and television in every room. Public listings give check-in at 14:00 and check-out at 10:00 — confirm when you enquire.
+              Mwenje has six bedrooms, sleeping 12: three kings, one double and two twins. Each room has its own gallery. Free Wi-Fi and television in every room. Public listings give check-in at 14:00 and check-out at 10:00 — confirm when you enquire.
             </p>
           </article>
           <article>
@@ -65,14 +75,7 @@ export default function Plan() {
         </Button>
       </Section>
       <Section heading="Questions" className="pt-0">
-        <dl className="space-y-8">
-          {faqs.map((faq) => (
-            <div key={faq.id} className="border-t border-bronze/20 pt-6">
-              <dt className="font-sans text-sm tracking-[0.08em]">{faq.question}</dt>
-              <dd className="mt-3 max-w-3xl text-sm leading-relaxed text-charcoal/80">{faq.answer}</dd>
-            </div>
-          ))}
-        </dl>
+        <FaqList items={faqs.filter((item) => item.published)} />
       </Section>
     </>
   )

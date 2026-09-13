@@ -3,6 +3,7 @@ import { Seo } from "@/components/seo/Seo"
 import { Button } from "@/components/ui/Button"
 import { RoomGallery } from "@/components/accommodation/RoomGallery"
 import { rooms } from "@/data/rooms"
+import { breadcrumbJsonLd, lodgingBusiness, roomJsonLd, roomSeoTitle } from "@/lib/seo"
 
 export default function Room() {
   const { slug } = useParams()
@@ -14,10 +15,22 @@ export default function Room() {
   return (
     <>
       <Seo
-        title={`${room.name} | Mwenje Guest House`}
-        description={room.description}
+        title={roomSeoTitle(room)}
+        description={`${room.name} at Mwenje Guest House, Victoria Falls: ${room.bedConfiguration}, ensuite, sleeps ${room.maxGuests}. Free Wi-Fi, television and air conditioning. Enquire for current rates.`}
         path={`/stay/rooms/${room.slug}`}
         image={room.image}
+        imageAlt={room.gallery[0]?.alt ?? `${room.name} at Mwenje Guest House`}
+        titleTemplate={false}
+        jsonLd={[
+          lodgingBusiness(),
+          roomJsonLd(room),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Mwenje Guest House", path: "/stay" },
+            { name: "Rooms", path: "/stay/rooms" },
+            { name: room.name, path: `/stay/rooms/${room.slug}` },
+          ]),
+        ]}
       />
       <section className="bg-paper pt-32">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 pb-20 md:grid-cols-2 md:px-10">

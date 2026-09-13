@@ -7,9 +7,10 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About Zambezi Tiger Adventures and Mwenje"
-        description="A Victoria Falls pairing: guided tiger fishing on the Upper Zambezi and ensuite rooms at Mwenje Guest House."
+        title="About | Zambezi Tiger Adventures & Mwenje Guest House"
+        description="Zambezi Tiger Adventures runs guided tiger fishing on the Upper Zambezi. Mwenje Guest House is a six-bedroom ensuite stay in Victoria Falls, Zimbabwe."
         path="/about"
+        titleTemplate={false}
       />
       <Section className="pt-32" eyebrow="About" heading="A river. A house. One destination.">
         <div className="grid gap-12 lg:grid-cols-2">
@@ -17,15 +18,18 @@ export default function About() {
             <ZambeziLogo className="mb-6 h-16" />
             <h2 className="display text-4xl">Zambezi Tiger Adventures</h2>
             <p className="mt-5 leading-relaxed text-charcoal/80">
-              Guided sport fishing on the Upper Zambezi at Victoria Falls. Three-hour, half-day and full-day trips. We do
-              not publish unverified records, guide biographies or prices. If you want the river, write to us.
+              Guided tiger fishing on the Upper Zambezi at Victoria Falls. Three-hour, half-day and full-day trips for
+              African tigerfish. We do not publish unverified records, guide biographies or prices. If you want the river,
+              write to us.
             </p>
           </div>
           <div>
             <MwenjeLogo className="mb-6 h-20" />
             <h2 className="display text-4xl">Mwenje Guest House</h2>
             <p className="mt-5 leading-relaxed text-charcoal/80">
-              Six ensuite rooms in Victoria Falls — five doubles and one twin. Each room has its own photograph gallery. Free Wi-Fi and television in every room.
+              A six-bedroom ensuite guest house in Victoria Falls, sleeping 12 — three kings, one double and two twins.
+              Already listed on the holiday-rental platforms travellers use. Each room has its own photograph gallery. Free
+              Wi-Fi, television and a swimming pool.
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@ import { experiences } from "@/data/experiences"
 import { galleryItems } from "@/data/gallery"
 import { propertyFacts, rooms } from "@/data/rooms"
 import { reviews } from "@/data/navigation"
-import { SITE_NAME } from "@/lib/seo"
+import { homeJsonLd } from "@/lib/seo"
 import { ReviewCard } from "@/components/reviews/ReviewCard"
 import { MwenjeLogo, ZambeziLogo } from "@/components/brand/Logos"
 import bannerVideo from "@/assets/banner.mp4"
@@ -24,15 +24,18 @@ export default function Home() {
   return (
     <>
       <Seo
-        title={SITE_NAME}
-        description="Tiger fishing on the Upper Zambezi and ensuite guest house stays at Mwenje in Victoria Falls, Zimbabwe."
+        title="Tiger Fishing Victoria Falls & Mwenje Guest House"
+        description="Guided tiger fishing on the Upper Zambezi at Victoria Falls, Zimbabwe, and Mwenje Guest House — six ensuite bedrooms sleeping 12. Enquire for current rates."
         path="/"
+        titleTemplate={false}
+        image="/images/fishing/guide-boat.jpg"
+        jsonLd={homeJsonLd()}
       />
       <HeroVideo
         desktopSrc={bannerVideo}
         mobileSrc={bannerVideo}
-        headline="Experience the Zambezi"
-        supporting="Tiger fishing, riverside adventure and a comfortable stay in Victoria Falls."
+        headline="Tiger fishing Victoria Falls"
+        supporting="Guided trips on the Upper Zambezi, and a six-bedroom stay at Mwenje Guest House."
         primaryCta={{ label: "Fish the Zambezi", to: "/fishing" }}
         secondaryCta={{ label: "Stay at Mwenje", to: "/stay" }}
       />
@@ -54,10 +57,10 @@ export default function Home() {
             <div className="relative flex h-full min-h-128 flex-col justify-end p-8 md:p-10">
               <ZambeziLogo onDark className="mb-6 h-14 w-auto md:h-16" />
               <p className="eyebrow">Zambezi Tiger Adventures</p>
-              <h3 className="display mt-3 text-4xl md:text-5xl">Fish the Upper Zambezi</h3>
+              <h3 className="display mt-3 text-4xl md:text-5xl">Tiger fishing Victoria Falls</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ivory/80">
-                Chase tigerfish on the Upper Zambezi with guided sport fishing experiences designed around the river, the
-                conditions and the catch.
+                Guided tiger fishing on the Upper Zambezi — 3-hour, half-day and full-day trips for beginners and
+                experienced anglers. Rates confirmed on enquiry.
               </p>
               <Button to="/fishing" variant="gold" className="mt-8 w-fit">
                 Explore fishing
@@ -74,9 +77,10 @@ export default function Home() {
             <div className="relative flex h-full min-h-128 flex-col justify-end p-8 md:p-10">
               <MwenjeLogo onDark className="mb-6 h-16 w-auto" />
               <p className="eyebrow">Mwenje Guest House</p>
-              <h3 className="display mt-3 text-4xl md:text-5xl">A base in Victoria Falls</h3>
+              <h3 className="display mt-3 text-4xl md:text-5xl">Mwenje Guest House</h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ivory/80">
-                Six ensuite rooms — five doubles and one twin — each with its own gallery. Free Wi-Fi and television in every room.
+                Six ensuite bedrooms in Victoria Falls, sleeping 12 — three kings, one double and two twins. Pool, free
+                Wi-Fi and television. Already listed on the holiday-rental platforms travellers use.
               </p>
               <Button to="/stay" variant="ivory" className="mt-8 w-fit">
                 Explore Mwenje
@@ -89,8 +93,8 @@ export default function Home() {
       <Section
         tone="ink"
         eyebrow="Zambezi Tiger Adventures"
-        heading="Chase the tiger"
-        lede="Sport fishing on the Upper Zambezi."
+        heading="Tiger fishing on the Upper Zambezi"
+        lede="Guided 3-hour, half-day and full-day tiger fishing trips at Victoria Falls."
       >
         <div className="grid gap-6 lg:grid-cols-3">
           {experiences.map((experience) => (
@@ -133,6 +137,16 @@ export default function Home() {
       </section>
 
       <Section eyebrow="Mwenje Guest House" heading="Your home in Victoria Falls">
+        <figure className="mb-14 overflow-hidden">
+          <ImageSlot
+            src="/images/mwenje/exterior.jpg"
+            alt="The brick guest house at Mwenje in Victoria Falls"
+            className="h-80 w-full object-cover object-[center_80%] md:h-112"
+          />
+          <figcaption className="mt-3 text-[0.68rem] tracking-[0.18em] text-earth uppercase">
+            The lodge
+          </figcaption>
+        </figure>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
           {propertyFacts.map((fact) => (
             <div key={fact.label} className="border-t border-bronze/30 pt-5">
@@ -143,8 +157,8 @@ export default function Home() {
         </div>
         <div className="mt-14 grid gap-4 md:grid-cols-4">
           {[
-            { src: "/images/mwenje/exterior.jpg", label: "The house" },
-            { src: "/images/mwenje/room-double-2.jpg", label: "Double ensuite" },
+            { src: "/images/mwenje/reception.jpg", label: "Reception" },
+            { src: "/images/mwenje/room-double-2.jpg", label: "King ensuite" },
             { src: "/images/mwenje/room-twin-2.jpg", label: "Twin ensuite" },
             { src: "/images/mwenje/pool-terrace.jpg", label: "Swimming pool" },
           ].map((item) => (
@@ -166,7 +180,7 @@ export default function Home() {
       <Section
         className="bg-paper"
         heading="The six rooms"
-        lede="Five doubles and one twin. Each room has its own gallery. Confirm availability for your dates."
+        lede="Three king rooms, one double and two twins. Sleeps 12. Each room has its own gallery."
       >
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {rooms.map((room) => (
@@ -180,7 +194,7 @@ export default function Home() {
           {[
             {
               title: "Sleep at Mwenje",
-              copy: "Six ensuite rooms — five doubles and one twin — with free Wi-Fi and television. Each room has its own gallery. A quiet base between the river and the Falls.",
+              copy: "Six bedrooms, sleeping 12 — three kings, one double and two twins. Free Wi-Fi and television. Each room has its own gallery.",
             },
             {
               title: "Fish the Zambezi",
@@ -245,7 +259,7 @@ export default function Home() {
             },
             {
               title: "Staying at Mwenje",
-              copy: "Six ensuite rooms — five doubles and one twin. Each room has its own gallery. Free Wi-Fi and television in every room.",
+              copy: "Six bedrooms, sleeping 12 — three kings, one double and two twins. Each room has its own gallery. Free Wi-Fi and television in every room.",
             },
           ].map((item) => (
             <div key={item.title} className="border-t border-bronze/25 pt-6">

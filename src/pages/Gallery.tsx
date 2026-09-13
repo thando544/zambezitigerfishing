@@ -7,9 +7,10 @@ export default function Gallery() {
   return (
     <>
       <Seo
-        title="Gallery | Fishing and Mwenje"
-        description="Original photographs of Zambezi Tiger Adventures fishing boats and Mwenje Guest House."
+        title="Gallery | Tiger Fishing Victoria Falls & Mwenje Guest House"
+        description="Original photographs of guided tiger fishing on the Upper Zambezi and Mwenje Guest House in Victoria Falls, Zimbabwe."
         path="/gallery"
+        titleTemplate={false}
       />
       <Section
         className="pt-32"

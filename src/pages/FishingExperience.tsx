@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section"
 import { ImageSlot } from "@/components/ui/ImageSlot"
 import { Button } from "@/components/ui/Button"
 import { experiences } from "@/data/experiences"
+import { breadcrumbJsonLd, experienceJsonLd, fishingOrganization } from "@/lib/seo"
 
 export default function FishingExperience() {
   const { slug } = useParams()
@@ -13,10 +14,20 @@ export default function FishingExperience() {
   return (
     <>
       <Seo
-        title={`${experience.name} | Upper Zambezi`}
-        description={`${experience.shortDescription} Enquire for current rates.`}
+        title={`${experience.name} Victoria Falls`}
+        description={`${experience.shortDescription} Guided tiger fishing on the Upper Zambezi at Victoria Falls, Zimbabwe. Enquire for current rates.`}
         path={`/fishing/${experience.slug}`}
         image={experience.image}
+        imageAlt={`${experience.name} on the Upper Zambezi at Victoria Falls`}
+        jsonLd={[
+          fishingOrganization(),
+          experienceJsonLd(experience),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Tiger fishing", path: "/fishing" },
+            { name: experience.name, path: `/fishing/${experience.slug}` },
+          ]),
+        ]}
       />
       <section className="bg-ink pt-32 pb-16 text-ivory">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:px-10">
@@ -47,6 +58,12 @@ export default function FishingExperience() {
             <dd className="mt-3 text-lg">{experience.guestCapacity}</dd>
           </div>
         </dl>
+        <h2 className="display mt-16 text-4xl">Tiger fishing on the Upper Zambezi</h2>
+        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-charcoal/80">
+          This is guided sport fishing for African tigerfish on the stretch of river above Victoria Falls. Other species
+          are present. What you catch depends on the river that day. Start times, boat capacity and further inclusions
+          are confirmed when you enquire.
+        </p>
         <h2 className="display mt-16 text-4xl">Included</h2>
         <ul className="mt-6 space-y-3 text-charcoal/80">
           {experience.inclusions.map((item) => (

@@ -1,7 +1,29 @@
 User-agent: *
 Allow: /
-
 Disallow: /admin
+Disallow: /admin/
 Disallow: /book/confirmation
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://www.zambezitigeradventures.com/sitemap.xml
+# Machine-readable facts: https://www.zambezitigeradventures.com/llms.txt

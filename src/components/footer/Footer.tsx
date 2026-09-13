@@ -35,17 +35,17 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/fishing/3-hour-fishing" className="no-underline hover:text-bronze">
-                  3-Hour Fishing
+                  3-Hour Tiger Fishing
                 </Link>
               </li>
               <li>
                 <Link to="/fishing/half-day-fishing" className="no-underline hover:text-bronze">
-                  Half-Day Fishing
+                  Half-Day Tiger Fishing
                 </Link>
               </li>
               <li>
                 <Link to="/fishing/full-day-fishing" className="no-underline hover:text-bronze">
-                  Full-Day Fishing
+                  Full-Day Tiger Fishing
                 </Link>
               </li>
             </ul>
