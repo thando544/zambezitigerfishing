@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom"
 import { Header } from "@/components/navigation/Header"
 import { Footer } from "@/components/footer/Footer"
+import { FloatingContact } from "@/components/navigation/FloatingContact"
 import { StickyCta } from "@/components/navigation/StickyCta"
 
 export function Layout() {
@@ -20,6 +21,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <FloatingContact />
       {hideSticky ? null : <StickyCta />}
     </>
   )
