@@ -11,11 +11,16 @@ import { galleryItems } from "@/data/gallery"
 import { propertyFacts, rooms } from "@/data/rooms"
 import { reviews } from "@/data/navigation"
 import { homeJsonLd } from "@/lib/seo"
+import { siteSettings } from "@/data/site"
+import { whatsappLink } from "@/lib/utils"
 import { ReviewCard } from "@/components/reviews/ReviewCard"
 import { MwenjeLogo, ZambeziLogo } from "@/components/brand/Logos"
 import bannerVideo from "@/assets/banner.mp4"
 
 export default function Home() {
+  const whatsapp = siteSettings.whatsapp
+    ? whatsappLink(siteSettings.whatsapp, "Hello — I would like to enquire about a Victoria Falls trip.")
+    : "/book"
   const previewGallery = [
     ...galleryItems.filter((item) => item.category === "mwenje").slice(0, 3),
     ...galleryItems.filter((item) => item.category !== "mwenje").slice(0, 3),
@@ -158,7 +163,7 @@ export default function Home() {
         <div className="mt-14 grid gap-4 md:grid-cols-4">
           {[
             { src: "/images/mwenje/reception.jpg", label: "Reception" },
-            { src: "/images/mwenje/room-double-2.jpg", label: "King ensuite" },
+            { src: "/images/mwenje/room1.jpg", label: "King ensuite" },
             { src: "/images/mwenje/room-twin-2.jpg", label: "Twin ensuite" },
             { src: "/images/mwenje/pool-terrace.jpg", label: "Swimming pool" },
           ].map((item) => (
@@ -289,7 +294,7 @@ export default function Home() {
             <Button to="/book?interest=accommodation" variant="outline" size="lg">
               Book your stay
             </Button>
-            <Button to="/book" variant="outline" size="lg">
+            <Button href={whatsapp} variant="outline" size="lg" external={whatsapp.startsWith("http")}>
               WhatsApp us
             </Button>
           </div>

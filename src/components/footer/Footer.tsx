@@ -105,7 +105,7 @@ export function Footer() {
             <ul className="mt-5 space-y-2 text-sm text-ivory/75">
               {siteSettings.phone ? (
                 <li>
-                  <a href={`tel:${siteSettings.phone}`} className="no-underline hover:text-bronze">
+                  <a href={`tel:${siteSettings.phone.replace(/\s/g, "")}`} className="no-underline hover:text-bronze">
                     {siteSettings.phone}
                   </a>
                 </li>

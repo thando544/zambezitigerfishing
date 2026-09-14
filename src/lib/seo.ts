@@ -15,6 +15,7 @@ export const PLACE = {
 } as const
 
 export const LISTINGS = {
+  booking: "https://www.booking.com/hotel/zw/mwenje-guest-house.en-gb.html",
   vrbo: "https://www.vrbo.com/en-gb/p4190161vb",
   airbnb: "https://www.airbnb.com/rooms/1094112859831770168",
 } as const
@@ -93,7 +94,7 @@ export function lodgingBusiness() {
     amenityFeature: stayAmenities,
     address,
     knowsAbout: ["Mwenje Guest House", "Victoria Falls guest house", "Victoria Falls holiday rental"],
-    sameAs: [LISTINGS.vrbo, LISTINGS.airbnb],
+    sameAs: [LISTINGS.booking, LISTINGS.vrbo, LISTINGS.airbnb],
     checkinTime: "14:00",
     checkoutTime: "10:00",
   }

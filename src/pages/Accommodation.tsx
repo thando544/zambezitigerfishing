@@ -103,13 +103,18 @@ export default function Accommodation() {
         </p>
         <p className="mt-4 text-sm text-charcoal/80">
           Also listed on{" "}
+          <a href={LISTINGS.booking} rel="noopener noreferrer" target="_blank">
+            Booking.com
+          </a>
+          ,{" "}
           <a href={LISTINGS.vrbo} rel="noopener noreferrer" target="_blank">
             Vrbo
           </a>{" "}
           and{" "}
           <a href={LISTINGS.airbnb} rel="noopener noreferrer" target="_blank">
             Airbnb
-          </a>. Public listings give check-in at 14:00 and check-out at 10:00 — confirm both when you enquire.
+          </a>
+          . Public listings give check-in at 14:00 and check-out at 10:00 — confirm both when you enquire.
         </p>
       </Section>
       <Section heading="Mwenje Guest House questions" className="pt-0">

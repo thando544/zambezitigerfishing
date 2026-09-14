@@ -1,13 +1,18 @@
 import type { SiteSettings } from "@/types"
 
+function envText(value: string | undefined, fallback = "") {
+  const trimmed = value?.trim()
+  return trimmed || fallback
+}
+
 export const siteSettings: SiteSettings = {
   fishingBrand: "Zambezi Tiger Adventures",
   stayBrand: "Mwenje Guest House",
   tagline: "Tiger fishing, riverside adventure and a comfortable stay in Victoria Falls.",
   locationLabel: "Victoria Falls, Zimbabwe",
-  email: import.meta.env.VITE_CONTACT_EMAIL ?? "",
-  phone: import.meta.env.VITE_CONTACT_PHONE ?? "",
-  whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER ?? "",
+  email: envText(import.meta.env.VITE_CONTACT_EMAIL),
+  phone: envText(import.meta.env.VITE_CONTACT_PHONE, "+263 77 233 8412"),
+  whatsapp: envText(import.meta.env.VITE_WHATSAPP_NUMBER, "263772338412"),
   address: "Victoria Falls, Zimbabwe",
 }
 

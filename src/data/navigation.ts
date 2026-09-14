@@ -79,7 +79,7 @@ export const faqs: Faq[] = [
     id: "faq-listings",
     question: "Is Mwenje Guest House listed on holiday-rental platforms?",
     answer:
-      "Yes. The house is listed on major holiday-rental platforms including Vrbo and Airbnb. You can also enquire here for a direct stay. A listing is not a confirmed booking on this site.",
+      "Yes. The house is listed on major holiday-rental platforms including Booking.com, Vrbo and Airbnb. You can also enquire here for a direct stay. A listing is not a confirmed booking on this site.",
     category: "stay",
     published: true,
   },

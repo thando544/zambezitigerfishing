@@ -50,7 +50,13 @@ export default function Contact() {
             <ul className="mt-8 space-y-3 text-sm">
               <li>{siteSettings.locationLabel}</li>
               <li>{siteSettings.email ? siteSettings.email : "Email available on enquiry"}</li>
-              <li>{siteSettings.phone ? siteSettings.phone : "Phone available on enquiry"}</li>
+              <li>
+                {siteSettings.phone ? (
+                  <a href={`tel:${siteSettings.phone.replace(/\s/g, "")}`}>{siteSettings.phone}</a>
+                ) : (
+                  "Phone available on enquiry"
+                )}
+              </li>
             </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button to="/book" variant="forest">
